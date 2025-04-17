@@ -1,0 +1,217 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content from top */
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+    padding-top: 50px; /* Space for fixed navbar */
+    padding-bottom: 50px; /* Space for fixed footer */
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(45, 246, 5);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #f0f805;
+}
+.navbar .logo {
+    width: 40px;
+    height: 40px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 5px; 
+}
+
+/* Container */
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: 80px; /* Space for fixed navbar */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Task List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.delete {
+    background-color: transparent;
+    color: #d9534f;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.delete:hover {
+    color: #c9302c;
+}
+
+.task-time {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #f3f3f3;
+}
+
+body.dark-mode .container {
+    background: #444;
+    color: #f3f3f3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode button {
+    background-color: #555;
+    color: #f3f3f3;
+}
+
+body.dark-mode button:hover {
+    background-color: #666;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 100;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}
